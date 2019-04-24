@@ -1,21 +1,21 @@
-# Feed-forward Neural Network built ==without using a Machine Learning framework==
+# Feed-forward Neural Network built == without using a Machine Learning framework ==
 
-###1. Getting Started
-- Download and install `jupyter-notebook`
-- Clone the repo
+### 1. Getting Started
+- Download and install [Jupyter](https://jupyter.org/)
+- Clone the repo by running `git clone https://github.com/dkreider/feed-forward-neural-network-from-scratch.git`
+- Download the [training data](https://pjreddie.com/media/files/mnist_train.csv) and [test data](https://pjreddie.com/media/files/mnist_test.csv) and stick them in a `data` folder inside the cloned repo.
 - Run `jupyter-notebook` to launch the notebook.
 
-###2. "Jest gimme the code!"
-
+### 2. "Jest gimme the code!"
 
 ```python
 import numpy as np
-import scipy.special
 import matplotlib.pyplot
 ```
 
 
 ```python
+# Neural network class
 class neuralNetwork:
     def __init__(self, input_nodes, 
                  hidden_nodes, 
@@ -25,12 +25,14 @@ class neuralNetwork:
         self.hnodes = hidden_nodes
         self.onodes = output_nodes
         self.lr = learning_rate
-        self.activation_function = lambda x:scipy.special.expit(x)
         
         # initialize and create weights
         self.wih = (np.random.rand(self.hnodes, self.inodes) - 0.5)
         self.who = (np.random.rand(self.onodes, self.hnodes) - 0.5)
         pass
+    
+    def activation_function(self, x):
+        return 1/(1+np.exp(-x))
     
     def train(self, inputs_list, targets_list):
         # convert inputs list to 2d array
@@ -120,7 +122,7 @@ scorecard_array = np.asarray(scorecard);
 print("Accuracy equals: ", scorecard_array.sum() / scorecard_array.size)
 ```
 
-    Accuracy equals:  0.945
+    Accuracy equals:  0.9409
     
 ### 3. Credits
 - [@makeyourowneuralnetwork](https://github.com/makeyourownneuralnetwork) gets credit for most of this code. He's got an amazing book called "Make Your Own Neural Network" that you should check out.

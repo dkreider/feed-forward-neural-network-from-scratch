@@ -1,4 +1,4 @@
-# Feed-forward Neural Network built == without using a Machine Learning framework ==
+# Build your own feed-forward neural network from scratch
 
 ### 1. Getting Started
 - Download and install [Jupyter](https://jupyter.org/)

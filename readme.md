@@ -126,5 +126,5 @@ print("Accuracy equals: ", scorecard_array.sum() / scorecard_array.size)
 ### 3. Credits
 - [@makeyourowneuralnetwork](https://github.com/makeyourownneuralnetwork) gets credit for most of this code. He's got an amazing book called "Make Your Own Neural Network" that you should check out.
 
-- And last but not least, I must and will give due credit to **God**, the author of intelligence. I'm sure he chuckles under His breath while the AI community burns the midnight oil and gobs of GPU's trying to discover better ways to create intelligence.
+- And last but not least, I must and will give due credit to **God**, the author of intelligence. I'm sure He chuckles under His breath while the AI community burns the midnight oil and gobs of GPU's trying to discover better ways to create intelligence.
 
